@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box; /* Mengatur box-sizing menjadi border-box untuk semua elemen */
+}
+
+body {
+    font-family: 'Quicksand', sans-serif; /* Mengatur jenis font untuk body */
+    margin: 0; /* Menghilangkan margin */
+    padding: 0; /* Menghilangkan padding */
+}
+
+h2, h3 {
+    color: rgb(229, 73, 11); /* Mengatur warna teks untuk elemen h2 dan h3 */
+}
+
+
+nav {
+    background: linear-gradient(to right, rgb(229, 73, 11), rgb(255, 153, 51));
+    padding: 2px; /* Memberikan padding pada navigasi */
+    position: sticky; /* Menetapkan posisi elemen navigasi */
+    top: 0; /* Meletakkan navigasi di bagian atas halaman */
+}
+
+nav ul {
+    padding-inline: 4rem; /* Menambahkan padding horizontal pada daftar navigasi */
+    display: flex; /* Mengubah daftar navigasi menjadi flex container */
+    gap: 3rem; /* Menambahkan jarak antara item dalam daftar navigasi */
+}
+
+nav li {
+    list-style-type: none; /* Menghilangkan bullet points dari daftar navigasi */
+}
+
+nav ul li.logo {
+    margin-right: auto; /* Menggeser logo ke pojok kanan */
+}
+
+nav ul li.logo img {
+    height: 35px; /* Sesuaikan ukuran logo */
+    width: auto;
+}
+nav a {
+    font-size: 18px; /* Mengatur ukuran font untuk tautan di navigasi */
+    font-weight: 400; /* Mengatur ketebalan font untuk tautan di navigasi */
+    text-decoration: none; /* Menghapus dekorasi tautan di navigasi */
+    color: white; /* Mengatur warna teks untuk tautan di navigasi */
+}
+
+nav a:hover {
+    background: #004a10;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 8px 15px 8px 15px;
+    color: #FFFFFF;
+    cursor:pointer;
+    font-weight: bold;
+    text-decoration: none; /* Mengatur ketebalan font saat tautan di navigasi dihover */
+}
+
+.profile header {
+    text-align: center; /* Pusatkan teks pada header profil */
+}
+
+.profile img {
+    width: 250px; /* Tetapkan lebar gambar profil */
+    margin-bottom: 20px; /* Tambahkan margin bawah untuk pemisahan */
+}
+
+.image-fitur {
+    width: 100%; /* Menyesuaikan lebar gambar dengan lebar kontainer */
+    max-height: 450px; /* Batasi tinggi maksimum gambar */
+    object-fit: cover; /* Atur gambar agar mengisi area tanpa merubah aspek rasio */
+    object-position: center; /* Pusatkan gambar horizontal */
+}
+
+
+.kotak {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Menambahkan bayangan pada kartu */
+    border-radius: 5px; /* Memberikan border-radius pada kartu */
+    padding: 20px; /* Memberikan padding pada kartu */
+    flex-direction: column; /* Menata konten secara vertikal */
+    align-items: center; /* Memposisikan konten secara vertikal di tengah */
+}   
+
+main {
+    padding: 20px; /* Memberikan padding pada konten utama */
+    display: flex; /* Mengubah konten utama menjadi flex container */
+    gap: 1.5rem; /* Menambahkan jarak antara item dalam konten utama */
+}
+
+#content {
+    flex: 5; /* Menetapkan flex-grow untuk konten utama */
+    display: flex; /* Mengubah konten menjadi flex container */
+    flex-flow: column nowrap; /* Menetapkan arah flex menjadi column */
+    gap: 1rem 2rem; /* Menambahkan jarak antara item dalam konten */
+}
+
+.deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    color: #364f6b;
+}
+
+aside {
+    flex: 1; /* Memberikan flex-grow untuk aside */
+}
+
+header {
+    display: inline; /* Menampilkan header secara inline */
+}
+
+footer {
+    padding: 20px; /* Memberi padding pada footer */
+    color: rgb(0, 0, 0); /* Mengatur warna teks pada footer */
+    text-align: center; /* Pusatkan teks pada footer */
+    font-weight: bold; /* Memberi ketebalan teks pada footer */
+}
+
+a.tombol {
+    background: rgb(229, 73, 11);
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 8px 15px 8px 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.tombol:hover {
+    background: #004a10;
+    text-decoration: none;
+}
+
+.medsos ul {
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .medsos li {
+    list-style-type: none;
+  }
+  
+  .medsos li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(229, 73, 11);
+    transition: all 0.1s ease-in-out;
+  }
+ 
+  .medsos li a:hover {
+    color: #004a10;
+  }
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap; /* Mengubah arah flex menjadi column pada layar dengan lebar 1200px dan di bawahnya */
+    }
+
+    main aside {
+        align-self:center; /* Pusatkan aside secara horizontal pada layar dengan lebar 1200px dan di bawahnya */
+    }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content:center; /* Pusatkan item dalam daftar navigasi secara horizontal pada layar dengan lebar 768px dan di bawahnya */
+    }
+
+    main aside {
+        align-self: stretch; /* Perpanjang aside ke seluruh lebar pada layar dengan lebar 768px dan di bawahnya */
+    }
+}
+
